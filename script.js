@@ -67,7 +67,9 @@ async function sendGreetingsSequentially(ids) {
 document.getElementById('Client-IDs-Form').addEventListener('submit', async function (event) {
     event.preventDefault();
 
+    
     const inputString = document.getElementById('Client-IDs').value;
+    if (inputString == ""){return}
     const trimmedArray = inputString.split(',').map(id => id.trim());
 
     // Hide the greeting body and show the loader
