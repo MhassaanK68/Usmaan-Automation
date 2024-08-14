@@ -4,6 +4,12 @@
     overflow-x: hidden;
 }
 
+#list-body{
+    max-height: 30vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
 
 @media (min-width: 576px) { 
     .page-heading{
