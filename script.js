@@ -83,11 +83,17 @@ document.getElementById('Client-IDs-Form').addEventListener('submit', async func
         // Wait for the sendGreetingsSequentially function to complete
         await sendGreetingsSequentially(trimmedArray);
     } finally {
-        // Hide the loader and show the greeting body
-        loader.style.display = "none";
-        document.getElementById("Greeting-Body").style.display = "block";
 
-        // Hide the modal
-        $('#GreetingsMenu').modal("hide");
+       setTimeout(() => {  
+
+       // Hide the loader and show the greeting body
+       loader.style.display = "none";
+       document.getElementById("Greeting-Body").style.display = "block";
+       
+       // Hide the modal
+       $('#GreetingsMenu').modal("hide");
+       location.reload()
+    }, 2000);
+        
     }
 });
